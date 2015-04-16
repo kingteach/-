@@ -1,0 +1,276 @@
+﻿@{
+    ViewBag.Title = "Commit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style type="text/css">
+    #list th {
+        background-color: #ccffff;
+        color: #000;
+        width: 120px;
+    }
+
+
+    #list td {
+        padding: 0px;
+        width: 160px;
+        text-align: left;
+    }
+
+    .td_txt {
+        border: 0;
+        background: transparent;
+        width: 100%;
+        height: 100%;
+    }
+
+    .td_select {
+        border: 1px;
+        background: transparent;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<table class="table_solid" id="list" border="0" cellspacing="0" style="width:770px;margin-bottom:30px; cursor:initial;">
+    <tr>
+        <td colspan="6" style="color: #000; text-align: center; font-weight: bold; height: 30px; background-color: #38aeae;">申请人基本信息</td>
+    </tr>
+    <tr>
+        <th>申请人姓名</th>
+        <td><input type="text" class="td_txt" /> </td>
+        <th>身份证号码</th>
+        <td><input type="text" class="td_txt" /></td>
+        <th>性别</th>
+        <td>
+            &nbsp;&nbsp;<input type="radio" name="sex" value="1" />男
+            &nbsp;&nbsp;
+            <input type="radio" name="sex" value="0" /> 女
+        </td>
+
+    </tr>
+    <tr>
+        <th>民族</th>
+        <td><input type="text" class="td_txt" /></td>
+        <th>文化程度</th>
+        <td>
+            <select class="td_select">
+                <option value="小学">小学</option>
+                <option value="小学">初中</option>
+                <option value="小学">高中</option>
+                <option value="小学">大专</option>
+                <option value="小学">本科</option>
+                <option value="小学">研究生</option>
+                <option value="小学">博士生</option>
+
+            </select>
+        </td>
+        <th>婚姻状况</th>
+        <td>
+            &nbsp;&nbsp;<input type="radio" name="hy" value="未婚" />未婚
+            &nbsp;&nbsp;
+            <input type="radio" name="hy" value="已婚" /> 已婚
+        </td>
+
+
+
+    </tr>
+    <tr>
+        <th>工作单位</th>
+        <td><input type="text" class="td_txt" /></td>
+        <th>联系电话</th>
+        <td><input type="text" class="td_txt" /></td>
+        <th>家庭成员数</th>
+        <td>
+            <input type="text" class="td_txt" />
+        </td>
+
+    </tr>
+    <tr>
+        <th>供养人数</th>
+        <td><input type="text" class="td_txt" /></td>
+        <th>家庭月收入</th>
+        <td><input type="text" class="td_txt" /></td>
+        <th>家庭月支出</th>
+        <td>
+            <input type="text" class="td_txt" />
+        </td>
+
+    </tr>
+
+    <tr style="height:90px;">
+        <th>申请人简介</th>
+        <td colspan="5"><textarea class="td_txt"></textarea></td>
+    </tr>
+    <tr>
+        <th>配偶姓名</th>
+        <td><input type="text" class="td_txt" /></td>
+        <th>配偶身份证</th>
+        <td><input type="text" class="td_txt" /></td>
+        <th>工作单位及职务</th>
+        <td>
+            <input type="text" class="td_txt" />
+        </td>
+
+    </tr>
+    <tr>
+        <th>配偶月收入</th>
+        <td><input type="text" class="td_txt" /></td>
+        <th>申请人简介及收入情况分析</th>
+        <td colspan="3"><textarea class="td_txt"></textarea></td>
+
+    </tr>
+    <tr>
+        <td colspan="6" style="color: #000; text-align:center;font-weight:bold;height:30px;background-color:#38aeae;">申请借款用途以及来源</td>
+    </tr>
+
+    <tr>
+        <th>申请原因及用途</th>
+        <td colspan="5"><input type="text" class="td_txt" /></td>
+    </tr>
+    <tr>
+        <th>申请金额</th>
+        <td><input type="text" class="td_txt" /></td>
+        <th>申请期限</th>
+        <td><input type="text" class="td_txt" /></td>
+        <th>申请利率</th>
+        <td>
+            <input type="text" class="td_txt" />
+        </td>
+
+    </tr>
+    <tr>
+
+        <td colspan="6" style="color: #000; text-align: center; font-weight: bold; height: 30px; background-color: #38aeae; ">担保方式</td>
+    </tr>
+
+    <tr>
+        <th>担保人</th>
+        <td><input type="text" class="td_txt" /></td>
+        <th>抵押物</th>
+        <td><input type="text" class="td_txt" /></td>
+        <th>抵押物所有权人</th>
+        <td>
+            <input type="text" class="td_txt" />
+        </td>
+
+    </tr>
+    <tr>
+        <th>抵押物价值</th>
+        <td><input type="text" class="td_txt" /></td>
+        <th></th>
+        <td></td>
+        <th></th>
+        <td></td>
+
+    </tr>
+    <tr>
+
+        <td colspan="6" style="color: #000; text-align: center; font-weight: bold; height: 30px; background-color: #38aeae;">调查人认为需要说明的其他情况</td>
+
+    </tr>
+    <tr>
+        <td colspan="6"><textarea class="td_txt"></textarea></td>
+    </tr>
+    <tr>
+
+        <td colspan="6" style="color: #000; text-align: center; font-weight: bold; height: 30px; background-color: #38aeae;">风险因素分析</td>
+
+    </tr>
+    <tr>
+        <td colspan="6"><textarea class="td_txt"></textarea></td>
+    </tr>
+    <tr>
+
+        <td colspan="6" style="color: #000; text-align: center; font-weight: bold; height: 30px; background-color: #38aeae;">风险防范措施</td>
+
+    </tr>
+    <tr>
+        <td colspan="6"><textarea class="td_txt"></textarea></td>
+    </tr>
+    <tr>
+
+        <td colspan="6" style="color: #000; text-align: center; font-weight: bold; height: 30px; background-color: #38aeae;">调查人声明与保证</td>
+
+    </tr>
+    <tr style="height:90px;">
+        <td colspan="6" style=" text-indent:2em"> 我们对借款申请人进行了调查，遵循客观性原则完成了本报告的撰写，我们对调查报告及附表所陈述事实和数据的真实性承担责任。</td>
+    </tr>
+    <tr>
+        <th>审核人</th>
+        <td colspan="4" style="text-align:center;height:50px;">
+            <input type="text" name="tags" id="tags" value="" />
+        </td>
+        <td style="text-align:center; width:100px;"><button class="bgbutton" id="btnChooseUser">选择</button></td>
+    </tr>
+    <tr>
+        <td colspan="6" style="text-align:center;height:50px;">
+            <input type="button" value="提交" class="bgbutton" style="width:140px; height:40px;" />
+        </td>
+    </tr>
+</table>
+@section headscripts{
+    <script src="~/Scripts/taginput/jquery.tagsinput.min.js"></script>
+    <link href="~/Scripts/taginput/jquery.tagsinput.min.css" rel="stylesheet" />
+}
+<script type="text/javascript">
+
+    var userIds = new Array();
+    var userNames = new Array();
+    //清空用户选择记录
+    function cleareChoise() {
+        $('#tags').importTags('');
+        userIds = new Array();
+        userNames = new Array();
+    }
+
+    function addUser(id, name) {
+        if ($.inArray(id, userIds) == -1) {
+            userIds.push(id);
+            userNames.push(name);
+            $('#tags').addTag(name);
+        }
+    }
+
+    function removeUser(id, name) {
+        if ($.inArray(id, userIds) != -1) {
+            userIds.pop(id);
+            userNames.pop(name);
+            $('#tags').removeTag(name);
+        }
+    }
+
+    $(function () {
+        $('#tags').tagsInput({
+            width: 'auto',
+            height: '40px',
+            onRemoveTag: function (tag) {
+                var i = userNames.indexOf(tag);
+                var id = userIds[i];
+                removeUser(id, tag);
+            },
+            interactive: false
+        });
+
+        $("#btnChooseUser").click(function () {
+            $.ajax({
+                type: "Get",
+                url: '@Url.Action("ChooseShUser")',
+                dataType: "json",
+                success: function (result) {
+                    $("#dialog").html(result).dialog({
+                        title: "人员列表",
+                        width: 450,
+                        maxHeight: 500,
+                        resizable: true,
+                        modal: true,
+                    });
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert("获取数据异常：" + errorThrown);
+                }
+            });
+        })
+    })
+</script>
+

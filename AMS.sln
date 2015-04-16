@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{12753539-3BE0-4DF7-95D2-0F27308977B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel", "Domain\ViewModel\ViewModel.csproj", "{2359F6FF-7576-4B28-953B-51FE41126690}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{B267B694-7B27-4910-84A8-EA2E516725FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infras", "Infras", "{D29AE858-F598-4678-96A4-1D5DF03F1660}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ams", "Infras\Ams\Ams.csproj", "{FAD9C696-5998-43E2-BD21-AFE418A83E70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F8ED1423-0C45-46D9-93AF-DAA3FF3C8298}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Core\Service\Service.csproj", "{C4183C7A-F3A2-4394-9C9B-576F2AB60F26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Domain\Model\Model.csproj", "{6658E5D1-B8E5-4C69-AA1B-2F5BA7456790}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ams.Components", "Infras\Ams.Components\Ams.Components.csproj", "{259CD6BE-3892-4C75-AFF4-5FD080C58D8B}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://kingteach.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Core\\Service\\Service.csproj
+		SccProjectTopLevelParentUniqueName1 = AMS.sln
+		SccProjectName1 = Core/Service
+		SccLocalPath1 = Core\\Service
+		SccProjectUniqueName2 = Domain\\Model\\Model.csproj
+		SccProjectTopLevelParentUniqueName2 = AMS.sln
+		SccProjectName2 = Domain/Model
+		SccLocalPath2 = Domain\\Model
+		SccProjectUniqueName3 = Domain\\ViewModel\\ViewModel.csproj
+		SccProjectTopLevelParentUniqueName3 = AMS.sln
+		SccProjectName3 = Domain/ViewModel
+		SccLocalPath3 = Domain\\ViewModel
+		SccProjectUniqueName4 = Web\\Web.csproj
+		SccProjectName4 = Web
+		SccLocalPath4 = Web
+		SccProjectUniqueName5 = Infras\\Ams\\Ams.csproj
+		SccProjectTopLevelParentUniqueName5 = AMS.sln
+		SccProjectName5 = Infras/Ams
+		SccLocalPath5 = Infras\\Ams
+		SccProjectUniqueName6 = Infras\\Ams.Components\\Ams.Components.csproj
+		SccProjectTopLevelParentUniqueName6 = AMS.sln
+		SccProjectName6 = Infras/Ams.Components
+		SccLocalPath6 = Infras\\Ams.Components
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12753539-3BE0-4DF7-95D2-0F27308977B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12753539-3BE0-4DF7-95D2-0F27308977B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12753539-3BE0-4DF7-95D2-0F27308977B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12753539-3BE0-4DF7-95D2-0F27308977B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2359F6FF-7576-4B28-953B-51FE41126690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2359F6FF-7576-4B28-953B-51FE41126690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2359F6FF-7576-4B28-953B-51FE41126690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2359F6FF-7576-4B28-953B-51FE41126690}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAD9C696-5998-43E2-BD21-AFE418A83E70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAD9C696-5998-43E2-BD21-AFE418A83E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAD9C696-5998-43E2-BD21-AFE418A83E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAD9C696-5998-43E2-BD21-AFE418A83E70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4183C7A-F3A2-4394-9C9B-576F2AB60F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4183C7A-F3A2-4394-9C9B-576F2AB60F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4183C7A-F3A2-4394-9C9B-576F2AB60F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4183C7A-F3A2-4394-9C9B-576F2AB60F26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6658E5D1-B8E5-4C69-AA1B-2F5BA7456790}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6658E5D1-B8E5-4C69-AA1B-2F5BA7456790}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6658E5D1-B8E5-4C69-AA1B-2F5BA7456790}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6658E5D1-B8E5-4C69-AA1B-2F5BA7456790}.Release|Any CPU.Build.0 = Release|Any CPU
+		{259CD6BE-3892-4C75-AFF4-5FD080C58D8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{259CD6BE-3892-4C75-AFF4-5FD080C58D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{259CD6BE-3892-4C75-AFF4-5FD080C58D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{259CD6BE-3892-4C75-AFF4-5FD080C58D8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2359F6FF-7576-4B28-953B-51FE41126690} = {B267B694-7B27-4910-84A8-EA2E516725FA}
+		{6658E5D1-B8E5-4C69-AA1B-2F5BA7456790} = {B267B694-7B27-4910-84A8-EA2E516725FA}
+		{FAD9C696-5998-43E2-BD21-AFE418A83E70} = {D29AE858-F598-4678-96A4-1D5DF03F1660}
+		{259CD6BE-3892-4C75-AFF4-5FD080C58D8B} = {D29AE858-F598-4678-96A4-1D5DF03F1660}
+		{C4183C7A-F3A2-4394-9C9B-576F2AB60F26} = {F8ED1423-0C45-46D9-93AF-DAA3FF3C8298}
+	EndGlobalSection
+EndGlobal

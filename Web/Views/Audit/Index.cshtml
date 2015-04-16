@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "审核列表";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="search_bar" class="mt10 mb15">
+    <div class="box">
+        <div class="box_border">
+            <div class="box_top"><b class="pl15">查询</b></div>
+            <div class="box_center pt10 pb10 pl10">
+                查询条件
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <table class="table_solid" id="list" border="0" cellspacing="0" style="width:100%">
+        <tr>
+            <th style="width:60px;">序号</th>
+            <th style="">单据</th>
+            <th style="width:120px">填单人</th>
+            <th style="width:130px">创建时间</th>
+            <th style="text-align:left;">状态</th>
+            <th style="text-align:left; width:90px;">操作</th>
+        </tr>
+        <!--ko foreach:dataSource-->
+        <tr>
+            <td data-bind="text:($root.pageIndex()-1)*10+$index() + 1"></td>
+            <td data-bind="text:TransName" style="text-align:left;"> </td>
+            <td data-bind="text:CreaterName"></td>
+            <td data-bind="text:formatedate(CreateTime)"></td>
+            <td data-bind="text:StatuMc"></td>
+            <td style="text-align:left;">审核</td>
+        </tr>
+        <!-- /ko -->
+        @*<!--ko if:dataSource()==null||dataSource().length==0-->
+            <tr><td class="2">暂无数据</td></tr>
+            <!-- /ko -->*@
+    </table>
+    @Html.Partial("_Pager")
+</div>
+@section scripts{
+    <script type="text/javascript">
+        $(function () {
+            var options = {
+                defaultOrderBy: "CreateTime",
+                isAsc: false,
+                //form: { Djh: '', Xdsj: '', Xdsj1: '', },
+                urls: {
+                    query: '@Url.Action("Search")'
+                }
+            };
+            var vm = new viewModel(options);
+            ko.applyBindings(vm);
+            vm.search();
+
+            $("#list").tableUI();
+        });
+
+    </script>
+}

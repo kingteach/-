@@ -1,0 +1,7 @@
+﻿<div class="page" data-bind="visible:$root.totalPages()>1">
+    <div class="pagecnt"><div id="pagination" class="pagination"></div></div>
+    <div class="pageinfo">
+        共 <span class="recordcount" data-bind="text:$root.totalCount()"></span> 条记录
+        当前第 <span class="recordcount" data-bind="text:$root.pageIndex()"></span> 页/共 <span class="recordcount" data-bind="text:$root.totalPages()"></span> 页
+    </div>
+</div>

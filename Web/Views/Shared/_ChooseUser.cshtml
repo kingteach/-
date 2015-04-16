@@ -1,0 +1,38 @@
+﻿@model List<ViewModel.Employee>
+
+<div>
+    <div style="margin-bottom:10px; text-align:center;">
+        <input type="text" class="myinput" autofocus />
+        <button class="bgbutton" style="margin-right:5px;">查询</button>
+        <button class="bgbutton" style="margin-right:5px;" id="btnOk">确定</button>
+    </div>
+    <table class="table_solid" id="listuser" border="0" cellspacing="0" style="width:100%">
+        <tr>
+            <th style="width:60px;"></th>
+            <th style="text-align: left;">姓名</th>
+            <th style="width: 110px; text-align: left;">岗位</th>
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><input type="checkbox" data-userid="@item.Id" /> </td>
+                <td style="text-align:left;">@item.Name </td>
+                <td style="text-align:left;">@item.Station </td>
+            </tr>
+        }
+    </table>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $("#listuser").tableUI();
+        $("#btnOk").click(function () {
+            cleareChoise();
+            $("#listuser tr ").find("input[type=checkbox]:checked").each(function () {
+                addUser($(this).attr("data-userid"), $(this).parent("td").next().text());
+            })
+            $("#dialog").dialog("close");
+        })
+    });
+</script>

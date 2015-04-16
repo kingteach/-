@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“AMS.dbo.DJ_FCAJDK1”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="DJ_FCAJDK1">
+          <Property Name="DJID" Type="varchar" MaxLength="36" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“AMS.dbo.DJ_FCAJDK2”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="DJ_FCAJDK2">
+          <Property Name="DJID" Type="varchar" MaxLength="36" />
+        </EntityType>-->
+        <EntityType Name="SYS_TELLER_INFO">
+          <Key>
+            <PropertyRef Name="TELLER_ID" />
+          </Key>
+          <Property Name="TELLER_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UNIT_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="DEPT_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="ROW_ID" Type="float" />
+          <Property Name="PASSWORD" Type="nvarchar" MaxLength="255" />
+          <Property Name="TELLER_ROLE" Type="nvarchar" MaxLength="255" />
+          <Property Name="CUST_NAME" Type="nvarchar" MaxLength="255" />
+          <Property Name="SEX" Type="nvarchar" MaxLength="255" />
+          <Property Name="SIGN_STATE" Type="nvarchar" MaxLength="255" />
+          <Property Name="SIGN_ON_DATETIME" Type="nvarchar" MaxLength="255" />
+          <Property Name="SIGN_OFF_DATETIME" Type="nvarchar" MaxLength="255" />
+          <Property Name="CAN_COMMIT" Type="nvarchar" MaxLength="255" />
+          <Property Name="BIRTHDAY" Type="nvarchar" MaxLength="255" />
+          <Property Name="START_JOB_DATE" Type="nvarchar" MaxLength="255" />
+          <Property Name="ID_CARD" Type="nvarchar" MaxLength="255" />
+          <Property Name="EMPLOYEE_CARD_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="NATIVE_PLACE" Type="nvarchar" MaxLength="255" />
+          <Property Name="HOME_ADDR" Type="nvarchar" MaxLength="255" />
+          <Property Name="EDU_LEV" Type="nvarchar" MaxLength="255" />
+          <Property Name="TOP_DEGREE" Type="nvarchar" MaxLength="255" />
+          <Property Name="IS_MARRIED" Type="nvarchar" MaxLength="255" />
+          <Property Name="POLITY" Type="nvarchar" MaxLength="255" />
+          <Property Name="DUTY" Type="nvarchar" MaxLength="255" />
+          <Property Name="TITLE_TECHNICAL_POST" Type="nvarchar" MaxLength="255" />
+          <Property Name="STATION" Type="nvarchar" MaxLength="255" />
+          <Property Name="STATION_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="UPPER_UNIT_NAME" Type="nvarchar" MaxLength="255" />
+          <Property Name="TEL_WROK" Type="nvarchar" MaxLength="255" />
+          <Property Name="MOBIL" Type="nvarchar" MaxLength="255" />
+          <Property Name="TEL_HOME" Type="nvarchar" MaxLength="255" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="255" />
+          <Property Name="REMARK" Type="nvarchar" MaxLength="255" />
+          <Property Name="UNIT" Type="nvarchar" MaxLength="255" />
+          <Property Name="USER_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="RECORD_STATE" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="SYS_USER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="TELLER_ID" Type="nchar" MaxLength="10" />
+          <Property Name="UNIT_ID" Type="nchar" MaxLength="10" />
+          <Property Name="DEPT_ID" Type="nchar" MaxLength="10" />
+          <Property Name="PASSWORD" Type="nchar" MaxLength="10" />
+          <Property Name="CUST_NAME" Type="nchar" MaxLength="10" />
+          <Property Name="SEX" Type="int" />
+          <Property Name="ID_CARD" Type="nchar" MaxLength="10" />
+          <Property Name="NATIVE_PLACE" Type="nchar" MaxLength="10" />
+          <Property Name="HOME_ADDR" Type="nchar" MaxLength="10" />
+          <Property Name="EDU_LEV" Type="nchar" MaxLength="10" />
+          <Property Name="TOP_DEGREE" Type="nchar" MaxLength="10" />
+          <Property Name="IS_MARRIED" Type="nchar" MaxLength="10" />
+          <Property Name="POLITY" Type="nchar" MaxLength="10" />
+          <Property Name="DUTY" Type="nchar" MaxLength="10" />
+          <Property Name="TITLE_TECHNICAL_POST" Type="nchar" MaxLength="10" />
+          <Property Name="STATION" Type="nchar" MaxLength="10" />
+          <Property Name="UPPER_UNIT_NAME" Type="nchar" MaxLength="10" />
+          <Property Name="TEL_WROK" Type="nchar" MaxLength="10" />
+          <Property Name="MOBIL" Type="nchar" MaxLength="10" />
+          <Property Name="EMAIL" Type="nchar" MaxLength="10" />
+          <Property Name="UNIT" Type="nchar" MaxLength="10" />
+          <Property Name="USER_ID" Type="nchar" MaxLength="10" />
+          <Property Name="RECORD_STATE" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="TRANS_AUDIT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="MAINID" Type="varchar" MaxLength="36" />
+          <Property Name="AUDITID" Type="varchar" MaxLength="36" />
+          <Property Name="AUDITNAME" Type="varchar" MaxLength="50" />
+          <Property Name="STATU" Type="int" />
+          <Property Name="OPINON" Type="varchar" MaxLength="500" />
+          <Property Name="AUDITTIME" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TRANS_MAIN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="TRANSID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="TRANSNAME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CREATEID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="CREATER" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CREATTIME" Type="datetime" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="varchar" MaxLength="255" />
+          <Property Name="STATU" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TRANS_TYPE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="50" />
+          <Property Name="TABLENAME" Type="varchar" MaxLength="50" />
+          <Property Name="DESCRIPTION" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="AMSModelStoreContainer">
+          <EntitySet Name="SYS_TELLER_INFO" EntityType="Self.SYS_TELLER_INFO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYS_USER" EntityType="Self.SYS_USER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRANS_AUDIT" EntityType="Self.TRANS_AUDIT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRANS_MAIN" EntityType="Self.TRANS_MAIN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRANS_TYPE" EntityType="Self.TRANS_TYPE" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AMSModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="AMSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SYS_TELLER_INFO" EntityType="AMSModel.SYS_TELLER_INFO" />
+          <EntitySet Name="SYS_USER" EntityType="AMSModel.SYS_USER" />
+          <EntitySet Name="TRANS_AUDIT" EntityType="AMSModel.TRANS_AUDIT" />
+          <EntitySet Name="TRANS_MAIN" EntityType="AMSModel.TRANS_MAIN" />
+          <EntitySet Name="TRANS_TYPE" EntityType="AMSModel.TRANS_TYPE" />
+        </EntityContainer>
+        <EntityType Name="SYS_TELLER_INFO">
+          <Key>
+            <PropertyRef Name="TELLER_ID" />
+          </Key>
+          <Property Name="TELLER_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UNIT_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DEPT_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ROW_ID" Type="Double" />
+          <Property Name="PASSWORD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TELLER_ROLE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CUST_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SEX" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SIGN_STATE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SIGN_ON_DATETIME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SIGN_OFF_DATETIME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CAN_COMMIT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BIRTHDAY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="START_JOB_DATE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ID_CARD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EMPLOYEE_CARD_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NATIVE_PLACE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HOME_ADDR" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EDU_LEV" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TOP_DEGREE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IS_MARRIED" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="POLITY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DUTY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TITLE_TECHNICAL_POST" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="STATION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="STATION_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="UPPER_UNIT_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TEL_WROK" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MOBIL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TEL_HOME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="REMARK" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="UNIT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="USER_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RECORD_STATE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SYS_USER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="TELLER_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="UNIT_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="DEPT_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="PASSWORD" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="CUST_NAME" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="SEX" Type="Int32" />
+          <Property Name="ID_CARD" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="NATIVE_PLACE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="HOME_ADDR" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="EDU_LEV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TOP_DEGREE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="IS_MARRIED" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="POLITY" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="DUTY" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TITLE_TECHNICAL_POST" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="STATION" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="UPPER_UNIT_NAME" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TEL_WROK" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="MOBIL" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="EMAIL" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="UNIT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="USER_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="RECORD_STATE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TRANS_AUDIT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="MAINID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="AUDITID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="AUDITNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STATU" Type="Int32" />
+          <Property Name="OPINON" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="AUDITTIME" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TRANS_MAIN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="TRANSID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="TRANSNAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CREATEID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="CREATER" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CREATTIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="STATU" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TRANS_TYPE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TABLENAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AMSModelStoreContainer" CdmEntityContainer="AMSEntities">
+          <EntitySetMapping Name="SYS_TELLER_INFO">
+            <EntityTypeMapping TypeName="AMSModel.SYS_TELLER_INFO">
+              <MappingFragment StoreEntitySet="SYS_TELLER_INFO">
+                <ScalarProperty Name="RECORD_STATE" ColumnName="RECORD_STATE" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="TEL_HOME" ColumnName="TEL_HOME" />
+                <ScalarProperty Name="MOBIL" ColumnName="MOBIL" />
+                <ScalarProperty Name="TEL_WROK" ColumnName="TEL_WROK" />
+                <ScalarProperty Name="UPPER_UNIT_NAME" ColumnName="UPPER_UNIT_NAME" />
+                <ScalarProperty Name="STATION_ID" ColumnName="STATION_ID" />
+                <ScalarProperty Name="STATION" ColumnName="STATION" />
+                <ScalarProperty Name="TITLE_TECHNICAL_POST" ColumnName="TITLE_TECHNICAL_POST" />
+                <ScalarProperty Name="DUTY" ColumnName="DUTY" />
+                <ScalarProperty Name="POLITY" ColumnName="POLITY" />
+                <ScalarProperty Name="IS_MARRIED" ColumnName="IS_MARRIED" />
+                <ScalarProperty Name="TOP_DEGREE" ColumnName="TOP_DEGREE" />
+                <ScalarProperty Name="EDU_LEV" ColumnName="EDU_LEV" />
+                <ScalarProperty Name="HOME_ADDR" ColumnName="HOME_ADDR" />
+                <ScalarProperty Name="NATIVE_PLACE" ColumnName="NATIVE_PLACE" />
+                <ScalarProperty Name="EMPLOYEE_CARD_ID" ColumnName="EMPLOYEE_CARD_ID" />
+                <ScalarProperty Name="ID_CARD" ColumnName="ID_CARD" />
+                <ScalarProperty Name="START_JOB_DATE" ColumnName="START_JOB_DATE" />
+                <ScalarProperty Name="BIRTHDAY" ColumnName="BIRTHDAY" />
+                <ScalarProperty Name="CAN_COMMIT" ColumnName="CAN_COMMIT" />
+                <ScalarProperty Name="SIGN_OFF_DATETIME" ColumnName="SIGN_OFF_DATETIME" />
+                <ScalarProperty Name="SIGN_ON_DATETIME" ColumnName="SIGN_ON_DATETIME" />
+                <ScalarProperty Name="SIGN_STATE" ColumnName="SIGN_STATE" />
+                <ScalarProperty Name="SEX" ColumnName="SEX" />
+                <ScalarProperty Name="CUST_NAME" ColumnName="CUST_NAME" />
+                <ScalarProperty Name="TELLER_ROLE" ColumnName="TELLER_ROLE" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="ROW_ID" ColumnName="ROW_ID" />
+                <ScalarProperty Name="DEPT_ID" ColumnName="DEPT_ID" />
+                <ScalarProperty Name="UNIT_ID" ColumnName="UNIT_ID" />
+                <ScalarProperty Name="TELLER_ID" ColumnName="TELLER_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_USER">
+            <EntityTypeMapping TypeName="AMSModel.SYS_USER">
+              <MappingFragment StoreEntitySet="SYS_USER">
+                <ScalarProperty Name="RECORD_STATE" ColumnName="RECORD_STATE" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="MOBIL" ColumnName="MOBIL" />
+                <ScalarProperty Name="TEL_WROK" ColumnName="TEL_WROK" />
+                <ScalarProperty Name="UPPER_UNIT_NAME" ColumnName="UPPER_UNIT_NAME" />
+                <ScalarProperty Name="STATION" ColumnName="STATION" />
+                <ScalarProperty Name="TITLE_TECHNICAL_POST" ColumnName="TITLE_TECHNICAL_POST" />
+                <ScalarProperty Name="DUTY" ColumnName="DUTY" />
+                <ScalarProperty Name="POLITY" ColumnName="POLITY" />
+                <ScalarProperty Name="IS_MARRIED" ColumnName="IS_MARRIED" />
+                <ScalarProperty Name="TOP_DEGREE" ColumnName="TOP_DEGREE" />
+                <ScalarProperty Name="EDU_LEV" ColumnName="EDU_LEV" />
+                <ScalarProperty Name="HOME_ADDR" ColumnName="HOME_ADDR" />
+                <ScalarProperty Name="NATIVE_PLACE" ColumnName="NATIVE_PLACE" />
+                <ScalarProperty Name="ID_CARD" ColumnName="ID_CARD" />
+                <ScalarProperty Name="SEX" ColumnName="SEX" />
+                <ScalarProperty Name="CUST_NAME" ColumnName="CUST_NAME" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="DEPT_ID" ColumnName="DEPT_ID" />
+                <ScalarProperty Name="UNIT_ID" ColumnName="UNIT_ID" />
+                <ScalarProperty Name="TELLER_ID" ColumnName="TELLER_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRANS_AUDIT">
+            <EntityTypeMapping TypeName="AMSModel.TRANS_AUDIT">
+              <MappingFragment StoreEntitySet="TRANS_AUDIT">
+                <ScalarProperty Name="AUDITTIME" ColumnName="AUDITTIME" />
+                <ScalarProperty Name="OPINON" ColumnName="OPINON" />
+                <ScalarProperty Name="STATU" ColumnName="STATU" />
+                <ScalarProperty Name="AUDITNAME" ColumnName="AUDITNAME" />
+                <ScalarProperty Name="AUDITID" ColumnName="AUDITID" />
+                <ScalarProperty Name="MAINID" ColumnName="MAINID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRANS_MAIN">
+            <EntityTypeMapping TypeName="AMSModel.TRANS_MAIN">
+              <MappingFragment StoreEntitySet="TRANS_MAIN">
+                <ScalarProperty Name="STATU" ColumnName="STATU" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="CREATTIME" ColumnName="CREATTIME" />
+                <ScalarProperty Name="CREATER" ColumnName="CREATER" />
+                <ScalarProperty Name="CREATEID" ColumnName="CREATEID" />
+                <ScalarProperty Name="TRANSNAME" ColumnName="TRANSNAME" />
+                <ScalarProperty Name="TRANSID" ColumnName="TRANSID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRANS_TYPE">
+            <EntityTypeMapping TypeName="AMSModel.TRANS_TYPE">
+              <MappingFragment StoreEntitySet="TRANS_TYPE">
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="TABLENAME" ColumnName="TABLENAME" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

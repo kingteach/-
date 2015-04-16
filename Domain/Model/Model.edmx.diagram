@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8ef18f22b52c45e0b1918fccf89d127c" Name="Diagram1">
+        <EntityTypeShape EntityType="AMSModel.SYS_TELLER_INFO" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AMSModel.SYS_USER" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AMSModel.TRANS_AUDIT" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AMSModel.TRANS_MAIN" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="AMSModel.TRANS_TYPE" Width="1.5" PointX="6.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
